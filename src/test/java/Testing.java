@@ -4,9 +4,10 @@ public class Testing {
     public Testing(){}
 
     @Test
-    public void testPropperties(){
+    public void testProperties(){
         Methods methods = new Methods();
-        methods.printProppertyValue("name");
-        System.out.println(methods.getPropertyValue("lastname"));
+        methods.getProperty("url");
+        methods.getProperty("name");
+        methods.getProperty("lastName");
     }
 }
