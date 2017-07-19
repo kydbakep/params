@@ -1,8 +1,8 @@
 import java.io.FileInputStream;
 import java.util.Properties;
 
-class Methods {
-    Methods() {
+class DefineParameters {
+    DefineParameters() {
     }
 
     private String setProperty(String value) {

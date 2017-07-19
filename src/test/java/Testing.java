@@ -5,9 +5,9 @@ public class Testing {
 
     @Test
     public void testProperties(){
-        Methods methods = new Methods();
-        methods.getProperty("url");
-        methods.getProperty("name");
-        methods.getProperty("lastName");
+        DefineParameters defineParameters = new DefineParameters();
+        defineParameters.getProperty("url");
+        defineParameters.getProperty("name");
+        defineParameters.getProperty("lastName");
     }
 }
