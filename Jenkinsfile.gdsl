@@ -1,0 +1,87 @@
+node {
+    git branch: 'feature/jenkins', credentialsId: '768af34d-1c49-4f1c-b347-19e5def9afaa', url: 'ssh://git@stash.np.ua:7999/rpz/awis.git'
+    def environment = docker.build('php_app_56')
+    environment.inside('-v /storage01/jenkins_home/php_composer_cache:/home/jenkins/composer_cache') {
+        stage('Build') {
+            sh 'ls -a |  grep -e "[^.git|composer\\.lock]" | xargs rm -rf'
+            git branch: 'develop', credentialsId: '768af34d-1c49-4f1c-b347-19e5def9afaa', url: 'ssh://git@stash.np.ua:7999/rpz/awis.git'
+            sh 'composer install --no-dev'
+            sh 'composer archive --file=build --format=zip'
+        }
+
+        stage('Prepare') {
+            prepare()
+        }
+        parallel Test: {
+            runTests()
+        }, 'CS': {
+            runPhpcs()
+        }
+    }
+
+    stage('Deploy') {
+        sshagent(['768af34d-1c49-4f1c-b347-19e5def9afaa']) {
+            sh 'ssh jenkins@wis14.np.ua rm -rf /home/jenkins/develop/.[^.]* /home/jenkins/develop/*'
+            sh 'scp build.zip jenkins@wis14.np.ua:/home/jenkins/build.zip'
+            sh 'ssh jenkins@wis14.np.ua unzip -qx /home/jenkins/build.zip -d /home/jenkins/develop'
+            sh 'ssh jenkins@wis14.np.ua rm /home/jenkins/build.zip'
+            sh 'ssh jenkins@wis14.np.ua ln -s /home/jenkins/cli_config.php /home/jenkins/develop/cli_config.php'
+            sh 'ssh jenkins@wis14.np.ua ln -s /home/jenkins/Config.php /home/jenkins/develop/solution/config/Config.php'
+        }
+    }
+}
+
+def prepare() {
+    sh 'composer install'
+    sh 'composer require --dev brianium/paratest 0.14.0'
+    sh 'composer dump-autoload --optimize --classmap-authoritative -q'
+    writeFile encoding: 'utf8', file: 'solution/config/Config.php', text: '''<?php
+
+    class Config {
+
+        private static \$options = [
+            \'DBProvider\'                   => \'MySQL\',
+            \'DBHost\'                       => \'localhost\',
+            \'DBName\'                       => \'ULK\',
+            \'DBUser\'                       => \'user\',
+            \'DBPassword\'                   => \'pass\',
+            \'MemcacheServer\'               => \'localhost\',
+            \'MemcacheKeyPrefix\'            => \'ULK1\',
+            \'ExternalDatabaseConnections\'  => [],
+            \'ThisNode\'                     => \'Jenkins\',
+            \'ServiceUserName\'              => \'webulk\',
+            \'ServiceUserPassword\'          => \'webulk\'
+        ];
+
+        static function get(\$name, \$default = null) {
+            if (isset(self::\$options[\$name])) {
+                return self::\$options[\$name];
+            }
+            if (\$name == \'ServerName\') {
+                return (string) gethostname();
+            }
+            return \$default;
+        }
+
+        static function set(\$name, \$value) {
+            self::\$options[\$name] = \$value;
+        }
+    }'''
+}
+
+def runTests() {
+    try {
+        sh 'php vendor/bin/paratest -c tests/phpunit.xml --log-junit test_log.xml'
+    } catch (err) {}
+    junit allowEmptyResults: true, testResults: 'test_log.xml'
+}
+
+def runPhpcs() {
+    def workspace = pwd()
+    try {
+        sh "php7.1 vendor/bin/phpcs --encoding=utf-8 --report=checkstyle --report-file=checkstyle.xml --standard=vendor/np/awis_coding_standard/ruleset.xml --extensions=php ./"
+    } catch (err) {}
+    finally {
+        step([$class: 'CheckStylePublisher', pattern: "checkstyle.xml", canRunOnFailed: true])
+    }
+}
