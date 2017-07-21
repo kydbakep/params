@@ -17,10 +17,4 @@
         </dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>single_api_test</id>
-        </profile>
-    </profiles>
-
 </project>
