@@ -18,7 +18,7 @@ node {
 
             sh "mvn test " + commandParams
 
-            junit allowEmptyResults: true, testResults: 'tober_test_log.xml'
+            archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*'
         }
     }
 }
