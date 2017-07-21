@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''cd /var/lib/jenkins/workspace/np
 mvn clean test -Durl=yamaica.com -Dname=PEDRO
-mvn clean test
+mvn test
 '''
       }
     }
