@@ -1,15 +1,10 @@
-pipeline {
-    agent any
-    stages {
-        stage('param test') {
-            steps {
-                sh '''cd /var/lib/jenkins/workspace/np
-
-                    mvn clean test -Durl=yamaica.com -Dname=PEDRO
-                    mvn test -Durl=env.AWIS_URL
-
-                    '''
-            }
+node {
+    stage('Test of parameters') {
+        git 'https://github.com/kydbakep/params.git'
+        echo env.AWIS_URL
+        def environment = docker.build('tober_test_docker_build')
+        environment.inside() {
+            mvn surefire: test
         }
     }
 }
