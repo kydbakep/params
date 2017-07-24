@@ -1,10 +1,11 @@
 import org.junit.Test;
 
-public class DefineParametersTest {
-    public DefineParametersTest(){}
+public class Testing {
+    public Testing(){}
 
     @Test
     public void testProperties(){
+        System.out.println("...1");
         DefineParameters defineParameters = new DefineParameters();
         defineParameters.getProperty("url");
         defineParameters.getProperty("name");
@@ -13,6 +14,7 @@ public class DefineParametersTest {
 
     @Test
     public void anotherTest(){
+        System.out.println("...2");
         DefineParameters defineParameters = new DefineParameters();
         defineParameters.getProperty("name");
     }
