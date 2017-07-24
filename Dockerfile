@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get install -qqy xvfb gconf2 google-chrome-stable apt-utils mc nano \
     && apt-get clean
 
-COPY ./chromedriver /usr/local/bin
+#COPY ./chromedriver /usr/local/bin
 
 CMD Xvfb :10 -ac -screen 0 1920x1080x24 & \
     && export DISPLAY=:10 \
