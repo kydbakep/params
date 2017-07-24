@@ -1,7 +1,7 @@
 node {
     stage('Test of parameters') {
         sh "ls"
-        def environment = docker.build('tober_test_docker_build')
+        def environment = docker.build('tober_test_docker_build111')
         environment.inside() {
             sh 'ls -a src/'
 
