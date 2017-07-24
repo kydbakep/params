@@ -19,7 +19,7 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
-
+            sh "mkdir -p /home"
             sh "ls -a home/"
 //            sh "echo 'Starting tests'"
 //            sh "mvn clean test" + commandParams
