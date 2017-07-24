@@ -31,8 +31,8 @@ node {
 
         }
         finally {
-            sh "ls '**/target/surefire-reports/*.xml'"
-            junit '**/target/surefire-reports/*.xml'
+//            sh "ls '**/target/surefire-reports/*.xml'"
+//            junit '**/target/surefire-reports/*.xml'
         }
 
     }
