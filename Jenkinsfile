@@ -16,6 +16,7 @@ node {
             }
 
             sh "mvn clean"
+            sh "mvn test" + commandParams
 
 
             junit '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
