@@ -3,37 +3,28 @@ node {
 
     stage('Test of parameters') {
         sh "ls"
-        try {
-            def environment = docker.build('tober_test_docker_build')
-            environment.inside() {
-                sh 'ls -a src/'
 
-                def commandParams = ''
-                if (env.AWIS_URL) {
-                    commandParams += " -Durl=${env.AWIS_URL}"
-                }
-                if (env.AWIS_LASTNAME) {
-                    commandParams += " -DlastName=${env.AWIS_LASTNAME}"
-                }
-                if (env.AWIS_LOGIN) {
-                    commandParams += " -Dname=${env.AWIS_LOGIN}"
-                }
+        def environment = docker.build('tober_test_docker_build')
+        environment.inside() {
+            sh 'ls -a src/'
 
-
-                sh "echo 'Starting tests'"
-                sh "mvn clean"
-                sh "mvn test" + commandParams
-                junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
-                sh "ls '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/'"
-
+            def commandParams = ''
+            if (env.AWIS_URL) {
+                commandParams += " -Durl=${env.AWIS_URL}"
             }
-        } catch (Throwable e) {
+            if (env.AWIS_LASTNAME) {
+                commandParams += " -DlastName=${env.AWIS_LASTNAME}"
+            }
+            if (env.AWIS_LOGIN) {
+                commandParams += " -Dname=${env.AWIS_LOGIN}"
+            }
 
-        }
-        finally {
-//            sh "ls '**/target/surefire-reports/*.xml'"
-//            junit '**/target/surefire-reports/*.xml'
-        }
+            sh Xvfb :10&
 
+            sh "echo 'Starting tests'"
+            sh "mvn clean"
+            sh "mvn test" + commandParams
+            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+        }
     }
 }
