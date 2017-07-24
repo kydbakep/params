@@ -16,7 +16,7 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
-            sh "mvn test " + commandParams
+            sh "mvn clean test " + commandParams
 
 //            post {
 //                always {
