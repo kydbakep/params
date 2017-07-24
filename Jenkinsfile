@@ -18,6 +18,12 @@ node {
 
             sh "mvn test " + commandParams
 
+            post {
+                always {
+                    junit 'build/reports/**/*.xml'
+                }
+            }
+
 //              archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*'
 //              Розібратись з логуванням
         }
