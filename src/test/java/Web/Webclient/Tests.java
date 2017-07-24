@@ -18,7 +18,7 @@ public class Tests {
     @Before
     public void setBrowser() {
 
-        System.setProperty("webdriver.chrome.driver", "./chromedriver");
+        System.setProperty("webdriver.chrome.driver", "**/chromedriver");
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
