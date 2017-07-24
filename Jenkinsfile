@@ -1,6 +1,5 @@
 node {
     stage('Test of parameters') {
-        git "ssh://git@stash.np.ua:7999/rpz/test_parameters.git"
         sh "ls"
         def environment = docker.build('tober_test_docker_build')
         environment.inside() {
