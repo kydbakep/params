@@ -21,10 +21,6 @@ node {
 
 
             sh "whoami"
-            sh "mkdir -p /home"
-            sh "mkdir -p /home/user"
-            sh "mkdir -p /home/user/.pki"
-            sh "mkdir -p /home/user/.pki/nssdb"
 
             sh "echo 'Starting tests'"
             sh "mvn clean test" + commandParams
