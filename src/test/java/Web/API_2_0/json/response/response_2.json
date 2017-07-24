@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "data": [
+    {
+      "Ref": "15355aa1-62f2-11e7-8ba8-005056881c6b",
+      "Description": "Бердичівська вул. 13 Заметка"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "Building already exists"
+  ],
+  "info": [],
+  "messageCodes": [],
+  "errorCodes": [],
+  "warningCodes": [
+    "30000500679"
+  ],
+  "infoCodes": []
+}

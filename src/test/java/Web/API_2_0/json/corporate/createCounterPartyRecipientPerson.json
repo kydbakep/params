@@ -1,0 +1,15 @@
+{
+  "apiKey": "88ef3c316458fd5b978d90a1cc0bfc79",
+  "modelName": "Counterparty",
+  "calledMethod": "save",
+  "methodProperties": {
+    "CityRef": "db5c88d7-391c-11dd-90d9-001a92567626",
+    "FirstName": "Фелікс",
+    "MiddleName": "Едуардович",
+    "LastName": "Яковлєв",
+    "Phone": "0997979789",
+    "Email": "",
+    "CounterpartyType": "PrivatePerson",
+    "CounterpartyProperty": "Recipient"
+  }
+}

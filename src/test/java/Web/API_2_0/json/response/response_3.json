@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": [
+    {
+      "Ref": "",
+      "Number": "",
+      "Date": "2017-07-07 11:58:51",
+      "Description": "",
+      "Errors": [],
+      "Success": [],
+      "Warnings": [],
+      "Data": {
+        "Errors": [
+          {
+            "Ref": "dd9ecf26-1dfc-11e7-8ba8-005056881c6b",
+            "Number": "20400046854961",
+            "Error": "Document already in ScanSheet",
+            "ScanSheetNumber": "105-01214855"
+          }
+        ],
+        "Success": [],
+        "Warnings": []
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "info": [],
+  "messageCodes": [],
+  "errorCodes": [],
+  "warningCodes": [],
+  "infoCodes": []
+}

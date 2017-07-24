@@ -1,0 +1,79 @@
+{
+  "success": true,
+  "data": [
+    {
+      "Ref": "cea68d24-1dfa-11e7-8ba8-005056881c6b",
+      "Description": "ФірмаТурбо",
+      "FirstName": "ФірмаТурбо",
+      "MiddleName": "",
+      "LastName": "",
+      "Counterparty": "00000000-0000-0000-0000-000000000000",
+      "OwnershipForm": "7f0f351d-2519-11df-be9a-000c291af1b3",
+      "OwnershipFormDescription": "ТОВ",
+      "EDRPOU": "",
+      "CounterpartyType": "Organization",
+      "ContactPerson": {
+        "success": true,
+        "data": [
+          {
+            "Description": "Кравченко Люцифер Машкович",
+            "Ref": "3da16883-25c3-11e7-8ba8-005056881c6b",
+            "LastName": "Кравченко",
+            "FirstName": "Люцифер",
+            "MiddleName": "Машкович"
+          },
+          {
+            "Description": "Кравченко Люцифер Жажкович",
+            "Ref": "d503ff51-28b9-11e7-8ba8-005056881c6b",
+            "LastName": "Кравченко",
+            "FirstName": "Люцифер",
+            "MiddleName": "Жажкович"
+          },
+          {
+            "Description": "Кравченко Люцифер Борисович",
+            "Ref": "f255aabc-1dfa-11e7-8ba8-005056881c6b",
+            "LastName": "Кравченко",
+            "FirstName": "Люцифер",
+            "MiddleName": "Борисович"
+          },
+          {
+            "Description": "Кравченко Люцифер Сашкович",
+            "Ref": "f8a2f9ce-25ac-11e7-8ba8-005056881c6b",
+            "LastName": "Кравченко",
+            "FirstName": "Люцифер",
+            "MiddleName": "Сашкович"
+          }
+        ],
+        "errors": [],
+        "warnings": [],
+        "info": {
+          "totalCount": 4
+        },
+        "messageCodes": [],
+        "errorCodes": [],
+        "warningCodes": [],
+        "infoCodes": []
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": {
+    "DuplicateValidate": "Counterparty is not unique",
+    "data": [
+      {
+        "Description": "Срака",
+        "Ref": "хуєф",
+        "LastName": "Пизда",
+        "FirstName": "Поїзда",
+        "MiddleName": "Хуяшкович"
+      }
+    ]
+  },
+  "info": [],
+  "messageCodes": [],
+  "errorCodes": [],
+  "warningCodes": {
+    "DuplicateValidate": "30000900779"
+  },
+  "infoCodes": []
+}

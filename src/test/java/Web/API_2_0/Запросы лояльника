@@ -1,0 +1,305 @@
+Запросы лояльника:
+
+
+Создание ИД на адрес, строкой
+{
+"apiKey": "f1ea29c616acff2634344f5eadd194f2",
+"modelName": "InternetDocument",
+"calledMethod": "save",
+"methodProperties": {
+"NewAddress": "1",
+"PayerType": "Sender",
+"PaymentMethod": "Cash",
+"CargoType": "Cargo",
+"VolumeGeneral": "0.1",
+"Weight": "10",
+"ServiceType": "WarehouseDoors",
+"SeatsAmount": "1",
+"Description": "абажур",
+"Cost": "500",
+"CitySender": "db5c88de-391c-11dd-90d9-001a92567626",
+"Sender": "3ac5fe8a-1dc4-11e7-8ba8-005056881c6b",
+"SenderAddress": "6a13a7f8-94db-11e5-a023-005056887b8d",
+"ContactSender": "3aca0bfa-1dc4-11e7-8ba8-005056881c6b",
+"SendersPhone": "380661313131",
+"RecipientCityName": "київ",
+"RecipientArea": "",
+"RecipientAreaRegions": "",
+"RecipientAddressName": "Столичне шосе",
+"RecipientHouse": "20",
+"RecipientFlat": "37",
+"RecipientName": "Тест Тест Тест",
+"RecipientType": "PrivatePerson",
+"RecipientsPhone": "380991234567",
+"DateTime": "10.04.2017"
+}
+}
+
+
+
+Создание адреса контрагента
+{
+ "apiKey": "f1ea29c616acff2634344f5eadd194f2",
+ "modelName": "Address",
+ "calledMethod": "save",
+ "methodProperties": {
+ "CounterpartyRef": "6c7202e2-2664-11e7-8ba8-005056881c6b",
+ "StreetRef": "d8364179-4149-11dd-9198-001d60451983",
+ "BuildingNumber": "14",
+ "Flat": "2",
+ "Note": "ффф2"
+ }
+}
+
+
+
+Создание ИД на адрес, старый способ
+{
+"apiKey": "f1ea29c616acff2634344f5eadd194f2",
+"modelName": "InternetDocument",
+"calledMethod": "save",
+"methodProperties": {
+"PayerType": "Sender",
+"PaymentMethod": "Cash",
+"DateTime": "21.04.2017",
+"CargoType": "Cargo",
+"VolumeGeneral": "0.1",
+"Weight": "10",
+"ServiceType": "WarehouseDoors",
+"SeatsAmount": "1",
+"Description": "абажур",
+"Cost": "500",
+"CitySender": "db5c88de-391c-11dd-90d9-001a92567626",
+"Sender": "3ac5fe8a-1dc4-11e7-8ba8-005056881c6b",
+"SenderAddress": "6a13a7f8-94db-11e5-a023-005056887b8d",
+"ContactSender": "3aca0bfa-1dc4-11e7-8ba8-005056881c6b",
+"SendersPhone": "380661313131",
+"CityRecipient": "8d5a980d-391c-11dd-90d9-001a92567626",
+"Recipient": "6c7202e2-2664-11e7-8ba8-005056881c6b",
+"RecipientAddress": "ae300073-2664-11e7-8ba8-005056881c6b",
+"ContactRecipient": "880316a5-2664-11e7-8ba8-005056881c6b",
+"RecipientsPhone": "380997979788"
+}
+}
+
+
+
+Создание ИД на отделение, строкой
+{
+"apiKey": "f1ea29c616acff2634344f5eadd194f2",
+"modelName": "InternetDocument",
+"calledMethod": "save",
+"methodProperties": {
+"NewAddress": "1",
+"PayerType": "Sender",
+"PaymentMethod": "Cash",
+"CargoType": "Cargo",
+"VolumeGeneral": "0.1",
+"Weight": "10",
+"ServiceType": "WarehouseWarehouse",
+"SeatsAmount": "1",
+"Description": "абажур",
+"Cost": "500",
+"CitySender": "db5c88de-391c-11dd-90d9-001a92567626",
+"Sender": "3ac5fe8a-1dc4-11e7-8ba8-005056881c6b",
+"SenderAddress": "6a13a7f8-94db-11e5-a023-005056887b8d",
+"ContactSender": "3aca0bfa-1dc4-11e7-8ba8-005056881c6b",
+"SendersPhone": "380661313131",
+"RecipientCityName": "київ",
+"RecipientArea": "",
+"RecipientAreaRegions": "",
+"RecipientAddressName": "1",
+"RecipientHouse": "",
+"RecipientFlat": "",
+"RecipientName": "Тест Тест Тест",
+"RecipientType": "PrivatePerson",
+"RecipientsPhone": "380991234567",
+"DateTime": "21.04.2017"
+}
+}
+
+
+
+Создание ИД на отделение, старый способ
+{
+"apiKey": "f1ea29c616acff2634344f5eadd194f2",
+"modelName": "InternetDocument",
+"calledMethod": "save",
+"methodProperties": {
+"PayerType": "Sender",
+"PaymentMethod": "Cash",
+"DateTime": "21.04.2017",
+"CargoType": "Cargo",
+"VolumeGeneral": "0.1",
+"Weight": "10",
+"ServiceType": "WarehouseWarehouse",
+"SeatsAmount": "1",
+"Description": "абажур",
+"Cost": "500",
+"CitySender": "db5c88de-391c-11dd-90d9-001a92567626",
+"Sender": "3ac5fe8a-1dc4-11e7-8ba8-005056881c6b",
+"SenderAddress": "6a13a7f8-94db-11e5-a023-005056887b8d",
+"ContactSender": "3aca0bfa-1dc4-11e7-8ba8-005056881c6b",
+"SendersPhone": "380661313131",
+"CityRecipient": "8d5a980d-391c-11dd-90d9-001a92567626",
+"Recipient": "6c7202e2-2664-11e7-8ba8-005056881c6b",
+"RecipientAddress": "1ec09d88-e1c2-11e3-8c4a-0050568002cf",
+"ContactRecipient": "880316a5-2664-11e7-8ba8-005056881c6b",
+"RecipientsPhone": "380997979788"
+}
+}
+
+
+
+Обновление документа
+{
+"apiKey": "f1ea29c616acff2634344f5eadd194f2",
+"modelName": "InternetDocument",
+"calledMethod": "update",
+"methodProperties": {
+"Ref": "d084a539-2665-11e7-8ba8-005056881c6b",
+"PayerType": "Sender",
+"PaymentMethod": "Cash",
+"DateTime": "21.04.2017",
+"CargoType": "Cargo",
+"VolumeGeneral": "0.1",
+"Weight": "10",
+"ServiceType": "WarehouseWarehouse",
+"SeatsAmount": "1",
+"Description": "абажур",
+"Cost": "600",
+"CitySender": "db5c88de-391c-11dd-90d9-001a92567626",
+"Sender": "3ac5fe8a-1dc4-11e7-8ba8-005056881c6b",
+"SenderAddress": "6a13a7f8-94db-11e5-a023-005056887b8d",
+"ContactSender": "3aca0bfa-1dc4-11e7-8ba8-005056881c6b",
+"SendersPhone": "380661313131",
+"CityRecipient": "8d5a980d-391c-11dd-90d9-001a92567626",
+"Recipient": "6c7202e2-2664-11e7-8ba8-005056881c6b",
+"RecipientAddress": "1ec09d88-e1c2-11e3-8c4a-0050568002cf",
+"ContactRecipient": "880316a5-2664-11e7-8ba8-005056881c6b",
+"RecipientsPhone": "380997979788"
+}
+}
+
+
+
+Создание реестра:
+{
+"modelName": "ScanSheet",
+"calledMethod": "insertDocuments",
+"methodProperties": {
+"DocumentRefs": [
+"d084a539-2665-11e7-8ba8-005056881c6b"
+]
+},
+"apiKey": "f1ea29c616acff2634344f5eadd194f2"
+}
+
+
+
+Создание контрагента ПО получателя
+{
+    "apiKey": "f1ea29c616acff2634344f5eadd194f2",
+    "modelName": "Counterparty",
+    "calledMethod": "save",
+    "methodProperties": {
+        "CityRef": "db5c88d7-391c-11dd-90d9-001a92567626",
+        "FirstName": "Фелікс",
+        "MiddleName": "Едуардович",
+        "LastName": "Яковлєв",
+        "Phone": "0997979780",
+        "Email": "",
+        "CounterpartyType": "PrivatePerson",
+        "CounterpartyProperty": "Recipient"
+    }
+}
+
+
+
+Создание контрагента ЮР получателя
+{
+"apiKey": "f1ea29c616acff2634344f5eadd194f2",
+"modelName": "Counterparty",
+"calledMethod": "save",
+"methodProperties": {
+"CityRef": "8d5a980d-391c-11dd-90d9-001a92567626",
+"FirstName": "ФірмаТурбо2",
+"MiddleName": "",
+"LastName": "",
+"Phone": "",
+"Email": "",
+"EDRPOU": "",
+"CounterpartyType": "Organization",
+"CounterpartyProperty": "Recipient",
+"OwnershipForm": "7f0f351d-2519-11df-be9a-000c291af1b3"
+}
+}
+
+
+
+Создание контактного лица контрагента
+{
+    "apiKey": "f1ea29c616acff2634344f5eadd194f2",
+    "modelName": "ContactPerson",
+    "calledMethod": "save",
+    "methodProperties": {
+        "CounterpartyRef": "6c7202e2-2664-11e7-8ba8-005056881c6b",
+        "FirstName": "Люцифер",
+        "LastName": "Кравченко",
+        "MiddleName": "Борисович",
+        "Phone": "+380997979788"
+    }
+}
+
+
+
+Создание третьего лица
+{
+ "apiKey": "f1ea29c616acff2634344f5eadd194f2",
+ "modelName": "Counterparty",
+ "calledMethod": "save",
+ "methodProperties": {
+ "CityRef": "8d5a980d-391c-11dd-90d9-001a92567626",
+ "FirstName": "",
+ "MiddleName": "",
+ "LastName": "",
+ "Phone": "",
+ "Email": "",
+ "CounterpartyType": "Organization",
+ "CounterpartyProperty": "ThirdPerson",
+ "EDRPOU": "36471822",
+ "OwnershipForm": ""
+ }
+}
+
+
+
+Создание ИД с плательщиком третьим лицом(третье лицо может оплачивать только по безналу)
+{
+"apiKey": "f1ea29c616acff2634344f5eadd194f2",
+"modelName": "InternetDocument",
+"calledMethod": "save",
+"methodProperties": {
+"ThirdPerson": "d278218f-2668-11e7-8ba8-005056881c6b",
+"PayerType": "ThirdPerson",
+"PaymentMethod": "NonCash",
+"DateTime": "21.04.2017",
+"CargoType": "Cargo",
+"VolumeGeneral": "0.1",
+"Weight": "10",
+"ServiceType": "WarehouseWarehouse",
+"SeatsAmount": "1",
+"Description": "абажур",
+"Cost": "500",
+"CitySender": "db5c88de-391c-11dd-90d9-001a92567626",
+"Sender": "3ac5fe8a-1dc4-11e7-8ba8-005056881c6b",
+"SenderAddress": "6a13a7f8-94db-11e5-a023-005056887b8d",
+"ContactSender": "3aca0bfa-1dc4-11e7-8ba8-005056881c6b",
+"SendersPhone": "380661313131",
+"CityRecipient": "8d5a980d-391c-11dd-90d9-001a92567626",
+"Recipient": "6c7202e2-2664-11e7-8ba8-005056881c6b",
+"RecipientAddress": "1ec09d88-e1c2-11e3-8c4a-0050568002cf",
+"ContactRecipient": "880316a5-2664-11e7-8ba8-005056881c6b",
+"RecipientsPhone": "380997979788"
+}
+}

@@ -1,0 +1,17 @@
+{
+  "apiKey": "88ef3c316458fd5b978d90a1cc0bfc79",
+  "modelName": "Counterparty",
+  "calledMethod": "save",
+  "methodProperties": {
+    "CityRef": "8d5a980d-391c-11dd-90d9-001a92567626",
+    "FirstName": "ФірмаТурбо",
+    "MiddleName": "",
+    "LastName": "",
+    "Phone": "",
+    "Email": "",
+    "EDRPOU": "",
+    "CounterpartyType": "Organization",
+    "CounterpartyProperty": "Recipient",
+    "OwnershipForm": "7f0f351d-2519-11df-be9a-000c291af1b3"
+  }
+}

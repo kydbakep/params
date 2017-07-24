@@ -1,0 +1,12 @@
+{
+  "apiKey": "88ef3c316458fd5b978d90a1cc0bfc79",
+  "modelName": "Address",
+  "calledMethod": "save",
+  "methodProperties": {
+    "CounterpartyRef": "cea68d24-1dfa-11e7-8ba8-005056881c6b",
+    "StreetRef": "d8364179-4149-11dd-9198-001d60451983",
+    "BuildingNumber": "13",
+    "Flat": "",
+    "Note": "заметка"
+  }
+}
