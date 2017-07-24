@@ -24,8 +24,8 @@ node {
                 }
             }
 
-//              archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*'
-//              Розібратись з логуванням
+            junit 'archiveArtifacts \'/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml\''
+            archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
         }
     }
 }
