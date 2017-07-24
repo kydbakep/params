@@ -1,5 +1,6 @@
 node {
     stage('Test of parameters') {
+        sh "ls"
         def environment = docker.build('tober_test_docker_build')
         environment.inside() {
             sh 'ls -a src/'
@@ -15,13 +16,8 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
-
             sh "mvn clean"
             sh "mvn test" + commandParams
-
-            sh "ls"
-            sh "rm -rf *"
-            sh "ls"
 
             junit '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
 
