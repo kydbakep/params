@@ -15,7 +15,8 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
-            sh "mvn clean package test" + commandParams
+            sh "mvn clean"
+
 
             junit '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
 
