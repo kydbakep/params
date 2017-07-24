@@ -19,11 +19,11 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
-            sh "mkdir -p /home"
-            sh "ls -a /home"
-//            sh "echo 'Starting tests'"
-//            sh "mvn clean test" + commandParams
-//            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+//            sh "mkdir -p /home/user/"
+
+            sh "echo 'Starting tests'"
+            sh "mvn clean test" + commandParams
+            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
         }
     }
 }
