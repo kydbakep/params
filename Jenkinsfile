@@ -19,6 +19,9 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
+            sh "mkdir -p /home"
+            sh "mkdir -p /home/user"
+            sh "mkdir -p /home/user/.pki"
             sh "mkdir -p /home/user/.pki/nssdb"
 
             sh "echo 'Starting tests'"
