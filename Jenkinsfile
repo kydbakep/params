@@ -23,11 +23,11 @@ node {
                 sh "echo 'Starting tests'"
                 sh "mvn clean"
                 sh "mvn test" + commandParams
-
+                junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
                 sh "ls '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/'"
 
             }
-        } catch (Throwable e){
+        } catch (Throwable e) {
 
         }
         finally {
