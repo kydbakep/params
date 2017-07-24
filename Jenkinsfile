@@ -19,6 +19,7 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
+            sh "mkdir /.pki"
             sh "echo 'Starting tests'"
             sh "mvn clean test" + commandParams
             junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
