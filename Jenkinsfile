@@ -19,7 +19,7 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
-            sh "mkdir /.pki"
+            sh "mkdir -p /.pki"
             sh "chown -R ubuntu:ubuntu /.pki"
             sh "echo 'Starting tests'"
             sh "mvn clean test" + commandParams
