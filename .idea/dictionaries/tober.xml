@@ -2,6 +2,7 @@
   <dictionary name="tober">
     <words>
       <w>webclient</w>
+      <w>xvfb</w>
     </words>
   </dictionary>
 </component>

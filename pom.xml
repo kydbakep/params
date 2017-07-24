@@ -24,7 +24,7 @@
                     <systemProperties>
                         <property>
                             <name>Xvfb</name>
-                            <value>:10</value>
+                            <value>:0</value>
                         </property>
                     </systemProperties>
                 </configuration>
