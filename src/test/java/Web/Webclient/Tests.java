@@ -13,12 +13,9 @@ import org.junit.Test;
  */
 public class Tests {
 
-//    private CounterParties cp = new CounterParties();
-
     @Before
     public void setBrowser() {
 
-        System.setProperty("webdriver.chrome.driver", "**/chromedriver");
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
