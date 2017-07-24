@@ -1,7 +1,9 @@
 node {
+    checkout scm
+
     stage('Test of parameters') {
         sh "ls"
-        def environment = docker.build('tober_test_docker_build111')
+        def environment = docker.build('tober_test_docker_build')
         environment.inside() {
             sh 'ls -a src/'
 
