@@ -19,8 +19,8 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
-            sh "mkdir $HOME/.pki/nssdb"
-            sh "chmod 777 $HOME/.pki/nssdb"
+//            sh "mkdir $HOME/.pki/nssdb"
+//            sh "chmod 777 $HOME/.pki/nssdb"
 
             sh "echo 'Starting tests'"
             sh "mvn clean test" + commandParams
