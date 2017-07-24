@@ -13,7 +13,6 @@ COPY ./chromedriver /usr/local/bin
 
 CMD Xvfb :10 -ac -screen 0 1920x1080x24 & \
     && export DISPLAY=:10 \
-    && echo 'HELLO'
     && sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome \
     && rm -f /tmp/.X1-lock \
     && chown -R tester:tester /usr/src/novaposhta \

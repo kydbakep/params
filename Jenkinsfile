@@ -1,6 +1,6 @@
 node {
     stage('Test of parameters') {
-//        git 'ssh://git@stash.np.ua:7999/rpz/test_parameters.git'
+        git 'ssh://git@stash.np.ua:7999/rpz/test_parameters.git'
         def environment = docker.build('tober_test_docker_build')
         environment.inside() {
             sh 'ls -a src/'
@@ -16,7 +16,6 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
-            echo "HELLO!"
             sh "mvn clean test " + commandParams
 
             junit '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
