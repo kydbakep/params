@@ -19,6 +19,8 @@ node {
                 commandParams += " -Dname=${env.AWIS_LOGIN}"
             }
 
+
+            sh "whoami"
             sh "mkdir -p /home"
             sh "mkdir -p /home/user"
             sh "mkdir -p /home/user/.pki"
