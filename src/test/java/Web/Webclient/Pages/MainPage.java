@@ -24,10 +24,8 @@ public class MainPage {
             if (informMessageFrame.isDisplayed()) {
                 System.out.println("User: " + userLoginLink.getText());
                 $(informMessageFrame).shouldBe(Condition.appears).shouldBe(Condition.enabled).shouldBe(Condition.visible);
-//                $(informMessageFrame).shouldBe(Condition.enabled);
-//                $(informMessageFrame).shouldBe(Condition.visible);
                 $(informMessageFrameAcceptButton).followLink();
-            } else System.err.println("Хуйня якась!");
+            } else System.out.println("Інформаційне вікно відсутнє!");
         }
     }
 
