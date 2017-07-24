@@ -10,4 +10,10 @@ public class Testing {
         defineParameters.getProperty("name");
         defineParameters.getProperty("lastName");
     }
+
+    @Test
+    public void anotherTest(){
+        DefineParameters defineParameters = new DefineParameters();
+        defineParameters.getProperty("name");
+    }
 }
