@@ -18,6 +18,7 @@ public class Tests {
 
     @Before
     public void setBrowser() {
+
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;

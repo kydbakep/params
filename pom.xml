@@ -18,15 +18,15 @@
                     <includes>
                         <include>**/Web/Webclient/Tests.java</include>
                     </includes>
-                    <environmentVariables>
-                        <DISPLAY>:0</DISPLAY>
-                    </environmentVariables>
                     <systemProperties>
                         <property>
                             <name>Xvfb</name>
-                            <value>:0</value>
+                            <value>:10</value>
                         </property>
                     </systemProperties>
+                    <environmentVariables>
+                        <DISPLAY>:10</DISPLAY>
+                    </environmentVariables>
                 </configuration>
             </plugin>
             <plugin>
@@ -57,12 +57,14 @@
             <version>4.8.1</version>
             <scope>ParametersTestScope</scope>
         </dependency>
+
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>4.4.3</version>
             <scope>test</scope>
         </dependency>
+<!--Json start-->
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
@@ -75,6 +77,12 @@
             <version>20090211</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+<!--Json end-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
