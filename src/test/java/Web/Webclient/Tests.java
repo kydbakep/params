@@ -1,5 +1,6 @@
 package Web.Webclient;
 
+import Web.Webclient.Methods.CounterParties;
 import Web.Webclient.Pages.AuthPage;
 import Web.Webclient.Pages.MainPage;
 import com.codeborne.selenide.Configuration;
@@ -13,9 +14,10 @@ import org.junit.Test;
  */
 public class Tests {
 
+    private CounterParties cp = new CounterParties();
+
     @Before
     public void setBrowser() {
-
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;

@@ -19,8 +19,14 @@
                         <include>**/Web/Webclient/Tests.java</include>
                     </includes>
                     <environmentVariables>
-                        <DISPLAY>:10</DISPLAY>
+                        <DISPLAY>:0</DISPLAY>
                     </environmentVariables>
+                    <systemProperties>
+                        <property>
+                            <name>Xvfb</name>
+                            <value>:10</value>
+                        </property>
+                    </systemProperties>
                 </configuration>
             </plugin>
             <plugin>
@@ -67,6 +73,12 @@
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20090211</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.4.0</version>
         </dependency>
 
     </dependencies>

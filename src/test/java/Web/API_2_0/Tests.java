@@ -131,5 +131,5 @@ public class Tests {
 //    public void consoleTest(){
 //        Main consoleTest = new Main();
 //        consoleTest.getProperties("web");
-}
+    }
 
