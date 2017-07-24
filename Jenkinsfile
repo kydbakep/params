@@ -20,7 +20,7 @@ node {
             }
 
 
-            sh "ls /home"
+            sh "ls -a home/"
 //            sh "echo 'Starting tests'"
 //            sh "mvn clean test" + commandParams
 //            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
