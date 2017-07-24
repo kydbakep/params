@@ -1,1 +1,1 @@
-test of 1.txt
+any text
