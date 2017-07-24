@@ -24,6 +24,8 @@ node {
             sh "mvn clean test" + commandParams
 
             junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+
+            sh "/bin/bash"
         }
     }
 }
