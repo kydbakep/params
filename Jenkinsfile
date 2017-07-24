@@ -24,7 +24,9 @@ node {
 //                }
 //            }
 
-            junit 'archiveArtifacts \'**/surefire-reports/TEST-*.xml\''
+            junit '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
+
+//            junit 'archiveArtifacts \'**/surefire-reports/TEST-*.xml\''
 //            archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
         }
     }
