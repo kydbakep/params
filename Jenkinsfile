@@ -23,7 +23,7 @@ node {
             sh "mvn clean"
             sh "mvn test" + commandParams
 
-            sh ls "/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/"
+            sh "ls '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/'"
 
             junit '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
 
