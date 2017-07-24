@@ -18,14 +18,14 @@ node {
 
             sh "mvn test " + commandParams
 
-            post {
-                always {
-                    junit 'build/reports/**/*.xml'
-                }
-            }
+//            post {
+//                always {
+//                    junit 'build/reports/**/*.xml'
+//                }
+//            }
 
             junit 'archiveArtifacts \'/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml\''
-            archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
+//            archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
         }
     }
 }
