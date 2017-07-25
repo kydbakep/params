@@ -21,7 +21,7 @@ node {
 
 
             sh "whoami"
-            sh "mkdir -p /.pki"
+            sh "pwd"
 
             sh "chown -R ubuntu:ubuntu /.pki"
             sh "echo 'Starting tests'"
