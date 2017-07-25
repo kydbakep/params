@@ -7,7 +7,9 @@ RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable 
 RUN apt-get update
 
 RUN apt-get install -qqy xvfb gconf2 google-chrome-stable apt-utils mc nano \
-    && apt-get clean
+    && apt-get clean \
+    && mkdir /.pki \
+    && chown -R ubuntu:ubuntu /.pki
 
 COPY ./chromedriver /usr/local/bin
 

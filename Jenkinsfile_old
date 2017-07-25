@@ -1,5 +1,13 @@
 node {
-    checkout scm
+//    checkout scm
+
+//    stage('Checkout and provision'){
+//        docker.image('ubuntu:14.04').withRun('-u root'){
+//            checkout scm
+//            sh 'chmod -R 770 ./'
+//            sh './init-script.sh'
+//        }
+//    }
 
     stage('Test of parameters') {
         sh "ls"
@@ -20,11 +28,10 @@ node {
             }
 
 
-//            sh "pwd"
-//            sh "chown "
-//            sh "whoami"
-//            sh "chown -R ubuntu:ubuntu /.pki"
-
+            sh "pwd"
+            sh "chown "
+            sh "whoami"
+            sh "chown -R ubuntu:ubuntu /.pki"
             sh "echo 'Starting tests'"
             sh "mvn clean test" + commandParams
             junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
