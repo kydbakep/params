@@ -10,7 +10,7 @@ RUN apt-get install -qqy xvfb gconf2 google-chrome-stable apt-utils mc nano \
     && apt-get clean \
     && mkdir /.pki \
     && chown -R 1000:1000 /.pki \
-    && chown -R tester:tester /usr/src/novaposhta \
+#    && chown -R tester:tester /usr/src/novaposhta \
     && chown -R 1000:1000 /usr/src/novaposhta \
 
 COPY ./chromedriver /usr/local/bin
