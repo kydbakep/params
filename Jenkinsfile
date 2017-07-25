@@ -20,9 +20,9 @@ node {
             }
 
 
-            sh "whoami"
             sh "pwd"
 
+            sh "whoami"
             sh "chown -R ubuntu:ubuntu /.pki"
             sh "echo 'Starting tests'"
             sh "mvn clean test" + commandParams
