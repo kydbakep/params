@@ -17,7 +17,7 @@ CMD Xvfb :10 -ac -screen 0 1920x1080x24 & \
     && rm -f /tmp/.X1-lock \
     && mkdir /.pki \
     && cd /.pki \
-    && pwd
+    && pwd \
     && chown -R tester:tester /.pki \
     && chown -R tester:tester /usr/src/novaposhta \
 
