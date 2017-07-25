@@ -20,5 +20,6 @@ RUN Xvfb :10& \
 #    && export DISPLAY=:10 \
 #    && sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome \
 #    && rm -f /tmp/.X1-lock \
-#    && chown -R tester:tester /usr/src/novaposhta \
+    && chown -R tester:tester /usr/src/novaposhta \
+    && chown -R 1000:1000 /usr/src/novaposhta \
 
