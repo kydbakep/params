@@ -7,15 +7,13 @@ RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable 
 RUN apt-get update
 
 RUN apt-get install -qqy xvfb gconf2 google-chrome-stable apt-utils mc nano \
-    && apt-get clean \
-    && mkdir /.pki \
-    && chown -R 1000:1000 /.pki \
-    && chown -R 1000:1000 /usr/src/novaposhta \
+    && apt-get clean
 
-COPY ./utils/chromedriver /usr/local/bin
+COPY ./chromedriver /usr/local/bin
 
 CMD Xvfb :10 -ac -screen 0 1920x1080x24 & \
     && export DISPLAY=:10 \
-#    && sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome \
-#    && rm -f /tmp/.X1-lock \
+    && sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome \
+    && rm -f /tmp/.X1-lock \
+    && chown -R tester:tester /usr/src/novaposhta \
 
