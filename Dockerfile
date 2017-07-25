@@ -10,16 +10,16 @@ RUN apt-get install -qqy xvfb gconf2 google-chrome-stable apt-utils mc nano \
     && apt-get clean \
     && mkdir /.pki \
     && chown -R 1000:1000 /.pki
+    && chown -R tester:tester /usr/src/novaposhta \
+    && chown -R 1000:1000 /usr/src/novaposhta \
 
 COPY ./chromedriver /usr/local/bin
 
-RUN Xvfb :10& \
+#RUN Xvfb :10& \
 #    &&
 
-#CMD Xvfb :10 -ac -screen 0 1920x1080x24 & \
-#    && export DISPLAY=:10 \
+CMD Xvfb :10 -ac -screen 0 1920x1080x24 & \
+    && export DISPLAY=:10 \
 #    && sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome \
 #    && rm -f /tmp/.X1-lock \
-    && chown -R tester:tester /usr/src/novaposhta \
-    && chown -R 1000:1000 /usr/src/novaposhta \
 
