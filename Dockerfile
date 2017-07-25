@@ -18,5 +18,6 @@ CMD mkdir /.pki \
     && export DISPLAY=:10 \
     && sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome \
     && rm -f /tmp/.X1-lock \
+    && chown -R tester:tester /.pki \
     && chown -R tester:tester /usr/src/novaposhta \
 
