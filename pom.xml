@@ -18,15 +18,15 @@
                     <includes>
                         <include>**/Web/Webclient/Tests.java</include>
                     </includes>
+                    <environmentVariables>
+                        <DISPLAY>:10</DISPLAY>
+                    </environmentVariables>
                     <systemProperties>
                         <property>
                             <name>Xvfb</name>
                             <value>:10</value>
                         </property>
                     </systemProperties>
-                    <environmentVariables>
-                        <DISPLAY>:10</DISPLAY>
-                    </environmentVariables>
                 </configuration>
             </plugin>
             <plugin>
