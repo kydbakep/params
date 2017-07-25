@@ -11,7 +11,8 @@ RUN apt-get install -qqy xvfb gconf2 google-chrome-stable apt-utils mc nano \
     && mkdir /.pki \
     && chown -R 1000:1000 /.pki \
     && chown -R 1000:1000 /usr/src/novaposhta \
-    && COPY ./chromedriver /usr/local/bin \
+
+COPY ./chromedriver /usr/local/bin \
 
 CMD Xvfb :10 -ac -screen 0 1920x1080x24 & \
     && export DISPLAY=:10 \
