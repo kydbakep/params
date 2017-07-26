@@ -12,19 +12,19 @@ public class DefineParameters {
         return System.getProperty(value);
     }
 
-    private void setProperty(String value) {
-        Properties prop = new Properties();
-        if (getProperty(value) == null) {
-            System.out.print("property '" + value + "' not defined. using from config: ");
-            try {
-                FileInputStream inputStream = new FileInputStream("./src/test/resources/predefined.properties");
-                prop.load(inputStream);
-                System.out.println(prop.getProperty(value) + "\n");
-            } catch (java.io.IOException e) {
-                System.out.println("properties file not found!");
-            }
-        } else System.out.println("property '" + value + "' is user defined: " + getProperty(value));
-    }
+//    private void setProperty(String value) {
+//        Properties prop = new Properties();
+//        if (getProperty(value) == null) {
+//            System.out.print("property '" + value + "' not defined. using from config: ");
+//            try {
+//                FileInputStream inputStream = new FileInputStream("./src/test/resources/predefined.properties");
+//                prop.load(inputStream);
+//                System.out.println(prop.getProperty(value) + "\n");
+//            } catch (java.io.IOException e) {
+//                System.out.println("properties file not found!");
+//            }
+//        } else System.out.println("property '" + value + "' is user defined: " + getProperty(value));
+//    }
 
     public String getParameter(String value) throws FileNotFoundException {
         Properties prop = new Properties();
