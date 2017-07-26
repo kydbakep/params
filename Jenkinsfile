@@ -12,14 +12,29 @@ node {
             if (env.AWIS_URL) {
                 commandParams += " -Dawis.url=${env.AWIS_URL}"
             }
-            if (env.AWIS_URL) {
-                commandParams += " -Dgoogle.url=${env.AWIS_URL}"
-            }
-            if (env.AWIS_LASTNAME) {
-                commandParams += " -DlastName=${env.AWIS_LASTNAME}"
-            }
             if (env.AWIS_LOGIN) {
-                commandParams += " -Dname=${env.AWIS_LOGIN}"
+                commandParams += " -Dawis.login=${env.AWIS_LOGIN}"
+            }
+            if (env.AWIS_PASSWORD) {
+                commandParams += " -Dawis.password=${env.AWIS_PASSWORD}"
+            }
+
+            if (env.WEB_URL) {
+                commandParams += " -Dweb.url=${env.WEB_URL}"
+            }
+            if (env.WEB_LOGIN) {
+                commandParams += " -Dweb.login=${env.WEB_LOGIN}"
+            }
+            if (env.WEB_PASSWORD) {
+                commandParams += " -Dweb.password=${env.WEB_PASSWORD}"
+            }
+
+
+            if (env.GOOGLE_URL) {
+                commandParams += " -Dgoogle.url=${env.GOOGLE_URL}"
+            }
+            if (env.GOOGLE_QUERY) {
+                commandParams += " -Dgoogle.query=${env.GOOGLE_QUERY}"
             }
 
 //            sh "Xvfb :99 -ac -screen 0 1920x1080x24 -nolisten tcp &"
