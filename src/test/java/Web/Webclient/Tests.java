@@ -32,7 +32,7 @@ public class Tests {
 
     }
 
-    @After
+//    @After
     public void stopActiveTest() throws InterruptedException {
         try {
             MainPage mainPage = new MainPage();
@@ -49,7 +49,7 @@ public class Tests {
         mainPage.logOut();
     }
 
-    @Test
+//    @Test
     public void login() {
 
         AuthPage authPage = new AuthPage();
