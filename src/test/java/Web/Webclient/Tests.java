@@ -35,9 +35,8 @@ public class Tests {
             MainPage mainPage = new MainPage();
             mainPage.closeAllModals();
             logout();
-            System.out.println("Logging out from WebClient...");
         } catch (Throwable th){
-            System.out.println("This is not NovaPoshta WebClient!");
+            System.out.println("Can not logOut: This is not NovaPoshta WebClient!");
         }
 
     }
