@@ -6,6 +6,7 @@
       <w>chproc</w>
       <w>chromedriver</w>
       <w>mkdir</w>
+      <w>nolisten</w>
       <w>nssdb</w>
       <w>procs</w>
       <w>webclient</w>
