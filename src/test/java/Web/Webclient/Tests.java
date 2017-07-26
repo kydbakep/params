@@ -54,6 +54,20 @@ public class Tests {
         AuthPage authPage = new AuthPage();
         MainPage mainPage = new MainPage();
         authPage.setUrl("http://webclient.sb.np.ua");
+//        authPage.setLogin("tober@i.ua");
+        authPage.setLogin("test_tech01");
+//        authPage.setPassword("boomkin.ua");
+        authPage.setPassword("e10adc3949ba59abbe56e057f20f883e");
+        authPage.loginToWebclient();
+        mainPage.acceptInformMessage();
+        mainPage.checkUserType();
+    }
+
+//    @Test
+    public void loginWithParameters() throws InterruptedException {
+        AuthPage authPage = new AuthPage();
+        MainPage mainPage = new MainPage();
+        authPage.setUrl("http://webclient.sb.np.ua");
         authPage.setLogin("tober@i.ua");
         authPage.setPassword("boomkin.ua");
         authPage.loginToWebclient();
