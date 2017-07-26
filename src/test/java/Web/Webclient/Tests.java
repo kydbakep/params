@@ -4,10 +4,13 @@ import Web.Webclient.Methods.CounterParties;
 import Web.Webclient.Pages.AuthPage;
 import Web.Webclient.Pages.GooglePage;
 import Web.Webclient.Pages.MainPage;
+import Web.Webclient.Parameters.DefineParameters;
 import com.codeborne.selenide.Configuration;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.FileNotFoundException;
 
 /**
  * Created by tober on 29.05.17.
@@ -64,6 +67,14 @@ public class Tests {
         GooglePage googlePage = new GooglePage();
         googlePage.setUrl("https://www.google.com.ua");
         googlePage.find("москаль");
+    }
+
+    @Test
+    public void googleTestWithParameters() throws InterruptedException, FileNotFoundException {
+        DefineParameters defineParameters = new DefineParameters();
+        GooglePage googlePage = new GooglePage();
+        googlePage.setUrl(defineParameters.getParameter("google.url"));
+        googlePage.find(defineParameters.getParameter("google.query"));
     }
 
 }

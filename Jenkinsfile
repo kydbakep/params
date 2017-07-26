@@ -10,7 +10,10 @@ node {
 
             def commandParams = ''
             if (env.AWIS_URL) {
-                commandParams += " -Durl=${env.AWIS_URL}"
+                commandParams += " -Dawis.url=${env.AWIS_URL}"
+            }
+            if (env.AWIS_URL) {
+                commandParams += " -Dgoogle.url=${env.AWIS_URL}"
             }
             if (env.AWIS_LASTNAME) {
                 commandParams += " -DlastName=${env.AWIS_LASTNAME}"
