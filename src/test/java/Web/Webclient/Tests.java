@@ -29,7 +29,7 @@ public class Tests {
 
     }
 
-//    @After
+    @After
     public void stopActiveTest() throws InterruptedException {
         MainPage mainPage = new MainPage();
         mainPage.closeAllModals();
@@ -41,7 +41,7 @@ public class Tests {
         mainPage.logOut();
     }
 
-//    @Test
+    @Test
     public void login() {
 
         AuthPage authPage = new AuthPage();
@@ -54,7 +54,7 @@ public class Tests {
         mainPage.checkUserType();
     }
 
-    @Test
+//    @Test
     public void googleTest() throws InterruptedException {
         GooglePage googlePage = new GooglePage();
         googlePage.setUrl("https://www.google.com.ua");
