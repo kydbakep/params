@@ -32,7 +32,7 @@ public class Tests {
 
     }
 
-//    @After
+    @After
     public void stopActiveTest() throws InterruptedException {
         try {
             MainPage mainPage = new MainPage();
@@ -50,7 +50,7 @@ public class Tests {
     }
 
     @Test
-    public void loginWithoutParameters() {
+    public void login() {
 
         AuthPage authPage = new AuthPage();
         MainPage mainPage = new MainPage();
@@ -62,32 +62,19 @@ public class Tests {
         mainPage.checkUserType();
     }
 
-//    @Test
-    public void loginWithParameters() throws FileNotFoundException {
-        DefineParameters defineParameters = new DefineParameters();
-        AuthPage authPage = new AuthPage();
-        MainPage mainPage = new MainPage();
-        authPage.setUrl(defineParameters.getParameter("web.url"));
-        authPage.setLogin(defineParameters.getParameter("web.login"));
-        authPage.setPassword(defineParameters.getParameter("web.password"));
-        authPage.loginToWebclient();
-        mainPage.acceptInformMessage();
-        mainPage.checkUserType();
-    }
-
-//    @Test
+    @Test
     public void googleTest() throws InterruptedException {
         GooglePage googlePage = new GooglePage();
         googlePage.setUrl("https://www.google.com.ua");
         googlePage.find("москаль");
     }
 
-//    @Test
+    @Test
     public void googleTestWithParameters() throws InterruptedException, FileNotFoundException {
         DefineParameters defineParameters = new DefineParameters();
         GooglePage googlePage = new GooglePage();
         googlePage.setUrl(defineParameters.getParameter("google.url"));
-        googlePage.find(defineParameters.getParameter("google.query"));
+        googlePage.find(defineParameters.getParameter("google.url"));
     }
 
 }
