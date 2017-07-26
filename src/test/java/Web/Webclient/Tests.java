@@ -74,7 +74,7 @@ public class Tests {
         DefineParameters defineParameters = new DefineParameters();
         GooglePage googlePage = new GooglePage();
         googlePage.setUrl(defineParameters.getParameter("google.url"));
-        googlePage.find(defineParameters.getParameter("google.url"));
+        googlePage.find(defineParameters.getParameter("google.query"));
     }
 
 }
