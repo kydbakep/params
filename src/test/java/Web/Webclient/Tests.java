@@ -63,6 +63,18 @@ public class Tests {
         mainPage.checkUserType();
     }
 
+    @Test
+    public void login2() throws InterruptedException {
+        AuthPage authPage = new AuthPage();
+        MainPage mainPage = new MainPage();
+        authPage.setLogin("tober@i.ua");
+        authPage.setLogin("test_tech01");
+        authPage.setPassword("boomkin.ua");
+        authPage.loginToWebclient();
+        mainPage.acceptInformMessage();
+        mainPage.checkUserType();
+    }
+
 //    @Test
     public void loginWithParameters() throws InterruptedException {
         AuthPage authPage = new AuthPage();
