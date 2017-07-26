@@ -36,7 +36,7 @@ public class Tests {
             mainPage.closeAllModals();
             logout();
         } catch (Throwable th){
-            System.out.println("Can't close Webclient session: is this NovaPoshta WebClient?");
+            System.out.println("Can't close Webclient session: is this NovaPoshta WebClient?\n");
         }
 
     }
