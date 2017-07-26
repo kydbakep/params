@@ -62,7 +62,7 @@ public class Tests {
         mainPage.checkUserType();
     }
 
-    @Test
+//    @Test
     public void loginWithParameters() throws FileNotFoundException {
         DefineParameters defineParameters = new DefineParameters();
         AuthPage authPage = new AuthPage();
