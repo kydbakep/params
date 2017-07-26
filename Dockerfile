@@ -35,8 +35,8 @@ ENV DISPLAY :99
 ADD start_test.sh /start_test.sh
 RUN chmod a+x /start_test.sh \
 #    && mkdir /tmp \
-    && mkdir /.X11-unix \
-    && chmod -R 755 /tmp
+#    && mkdir /.X11-unix \
+#    && chmod -R 755 /tmp
 
 # Rights for browser
 
