@@ -35,8 +35,9 @@ ENV DISPLAY :99
 ADD start_test.sh /start_test.sh
 RUN chmod a+x /start_test.sh
 
-# Start test
+# Rights for browser
 
-#CMD /start_test.sh
+RUN mkdir /.pki \
+    && mkdir /.pki/nssdb \
+    && chmod -R 755 /.pki
 
-#CMD (service xvfb start; export DISPLAY=:99)
