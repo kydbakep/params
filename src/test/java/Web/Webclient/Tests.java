@@ -32,7 +32,7 @@ public class Tests {
 
     }
 
-    @After
+//    @After
     public void stopActiveTest() throws InterruptedException {
         try {
             MainPage mainPage = new MainPage();
