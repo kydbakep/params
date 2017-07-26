@@ -54,7 +54,7 @@ public class Tests {
         mainPage.checkUserType();
     }
 
-//    @Test
+    @Test
     public void googleTest() throws InterruptedException {
         GooglePage googlePage = new GooglePage();
         googlePage.setUrl("https://www.google.com.ua");
