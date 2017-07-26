@@ -1,7 +1,7 @@
 import org.junit.Test;
 
-public class Testing {
-    public Testing(){}
+public class ParametersTesting {
+    public ParametersTesting(){}
 
     @Test
     public void testProperties(){

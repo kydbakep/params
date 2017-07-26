@@ -20,12 +20,12 @@
                     </includes>
                     <environmentVariables>
                         <!--<DISPLAY>:0</DISPLAY>-->
-                        <DISPLAY>:10</DISPLAY>
+                        <DISPLAY>:99</DISPLAY>
                     </environmentVariables>
                     <systemProperties>
                         <property>
-                            <name>Xvfb</name>
-                            <value>:10</value>
+                            <!--<name>Xvfb</name>-->
+                            <!--<value>:99</value>-->
                         </property>
                     </systemProperties>
                 </configuration>

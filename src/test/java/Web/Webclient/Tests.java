@@ -2,6 +2,7 @@ package Web.Webclient;
 
 import Web.Webclient.Methods.CounterParties;
 import Web.Webclient.Pages.AuthPage;
+import Web.Webclient.Pages.GooglePage;
 import Web.Webclient.Pages.MainPage;
 import com.codeborne.selenide.Configuration;
 import org.junit.After;
@@ -19,15 +20,16 @@ public class Tests {
     @Before
     public void setBrowser() {
 
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-
+//        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+//
         Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
+//        Configuration.browserSize = "1920x1080";
+        Configuration.holdBrowserOpen = false;
         Configuration.timeout = 1500;
+
     }
 
-    @After
+//    @After
     public void stopActiveTest() throws InterruptedException {
         MainPage mainPage = new MainPage();
         mainPage.closeAllModals();
@@ -39,8 +41,9 @@ public class Tests {
         mainPage.logOut();
     }
 
-    @Test
+//    @Test
     public void login() {
+
         AuthPage authPage = new AuthPage();
         MainPage mainPage = new MainPage();
         authPage.setUrl("http://webclient.sb.np.ua");
@@ -50,4 +53,12 @@ public class Tests {
         mainPage.acceptInformMessage();
         mainPage.checkUserType();
     }
+
+    @Test
+    public void googleTest() throws InterruptedException {
+        GooglePage googlePage = new GooglePage();
+        googlePage.setUrl("https://www.google.com.ua");
+        googlePage.find("москаль");
+    }
+
 }
