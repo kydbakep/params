@@ -31,9 +31,14 @@ public class Tests {
 
     @After
     public void stopActiveTest() throws InterruptedException {
-        MainPage mainPage = new MainPage();
-        mainPage.closeAllModals();
-        logout();
+        try {
+            MainPage mainPage = new MainPage();
+            mainPage.closeAllModals();
+            logout();
+        } catch (Throwable th){
+            System.out.println("This is not NovaPoshta WebClient!");
+        }
+
     }
 
     private void logout() throws InterruptedException {
