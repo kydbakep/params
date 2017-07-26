@@ -54,10 +54,15 @@ public class Tests {
         AuthPage authPage = new AuthPage();
         MainPage mainPage = new MainPage();
         authPage.setUrl("http://webclient.sb.np.ua");
+        System.out.println("Entering login");
         authPage.setLogin("tober@i.ua");
+        System.out.println("Entering password");
         authPage.setPassword("boomkin.ua");
+        System.out.println("Click on logIn button");
         authPage.loginToWebclient();
+        System.out.println("Accepting warning");
         mainPage.acceptInformMessage();
+        System.out.println("Checking user type");
         mainPage.checkUserType();
     }
 
