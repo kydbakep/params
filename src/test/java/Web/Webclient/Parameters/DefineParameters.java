@@ -28,13 +28,17 @@ public class DefineParameters {
 
     public String getParameter(String value) throws FileNotFoundException {
         Properties prop = new Properties();
-        try {
-            FileInputStream inputStream = new FileInputStream("./src/test/resources/predefined.properties");
-            prop.load(inputStream);
-            return prop.getProperty(value);
-        } catch (java.io.IOException e) {
-            System.out.println("properties file not found!");
-            return null;
+        if (getProperty(value) == null) {
+            try {
+                FileInputStream inputStream = new FileInputStream("./src/test/resources/predefined.properties");
+                prop.load(inputStream);
+                return prop.getProperty(value);
+            } catch (java.io.IOException e) {
+                System.out.println("properties file not found!");
+                return null;
+            }
+        } else {
+            return getProperty(value);
         }
     }
 }
