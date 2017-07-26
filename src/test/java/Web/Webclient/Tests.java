@@ -50,13 +50,26 @@ public class Tests {
     }
 
     @Test
-    public void login() {
+    public void loginWithoutParameters() {
 
         AuthPage authPage = new AuthPage();
         MainPage mainPage = new MainPage();
         authPage.setUrl("http://webclient.sb.np.ua");
         authPage.setLogin("tober@i.ua");
         authPage.setPassword("boomkin.ua");
+        authPage.loginToWebclient();
+        mainPage.acceptInformMessage();
+        mainPage.checkUserType();
+    }
+
+    @Test
+    public void loginWithParameters() throws FileNotFoundException {
+        DefineParameters defineParameters = new DefineParameters();
+        AuthPage authPage = new AuthPage();
+        MainPage mainPage = new MainPage();
+        authPage.setUrl(defineParameters.getParameter("web.url"));
+        authPage.setLogin(defineParameters.getParameter("web.login"));
+        authPage.setPassword(defineParameters.getParameter("web.password"));
         authPage.loginToWebclient();
         mainPage.acceptInformMessage();
         mainPage.checkUserType();
