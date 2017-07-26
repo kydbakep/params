@@ -23,7 +23,7 @@ public class Tests {
 //        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 //
         Configuration.browser = "chrome";
-//        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = false;
         Configuration.timeout = 1500;
 
