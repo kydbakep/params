@@ -8,7 +8,9 @@ import Web.Webclient.Parameters.DefineParameters;
 import com.codeborne.selenide.Configuration;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+//import com.codeborne.selenide.junit.ScreenShooter;
 
 import java.io.FileNotFoundException;
 
@@ -29,8 +31,12 @@ public class Tests {
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = false;
         Configuration.timeout = 1500;
+        Configuration.reportsFolder="target/surefire-reports";
 
     }
+
+//    @Rule
+//    public ScreenShooter makeScreenshotOnFailure = ScreenShooter.failedTests();
 
     @After
     public void stopActiveTest() throws InterruptedException {

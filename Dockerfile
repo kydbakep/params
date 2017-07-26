@@ -39,5 +39,6 @@ RUN chmod a+x /start_test.sh
 
 RUN mkdir /.pki \
     && mkdir /.pki/nssdb \
-    && chmod -R 755 /.pki
+    && chmod -R 755 /.pki \
+    && chmod -R 755 /usr/src
 
