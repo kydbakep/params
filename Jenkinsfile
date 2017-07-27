@@ -8,13 +8,13 @@ node {
         environment.inside() {
             sh 'ls -a src/'
 //==============================================================================
-            def commandParams = ''
+            String commandParams = ''
 // AWIS ------------------------------------------------------------------------
             if (env.AWIS_URL) {
                 commandParams += " -Dawis.url=${env.AWIS_URL}"
             }
             if (env.AWIS_LOGIN) {
-                commandParams += " -Dawis.login=${env.AWIS_LOGIN}"
+                commandParams += " -Dawis.login=${env.AWIS_gLOGIN}"
             }
             if (env.AWIS_PASSWORD) {
                 commandParams += " -Dawis.password=${env.AWIS_PASSWORD}"
