@@ -44,6 +44,7 @@ node {
 //            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
 //            sh "ls target/surefire-reports/"
 //            junit allowEmptyResults: true, keepLongStdio: true, testResults: '/var/log*'
+            archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.png'
         }
     }
     stage('Results') {
