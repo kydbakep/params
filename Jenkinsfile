@@ -48,6 +48,6 @@ node {
     }
     stage('Results') {
         junit allowEmptyResults: true, keepLongStdio: true, testResults: '**/target/surefire-reports/*.xml'
-        archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/surefire-reports/*.xml'
+        archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/screenshots/*.png'
     }
 }
