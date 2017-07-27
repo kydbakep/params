@@ -2,11 +2,8 @@ node {
     checkout scm
 
     stage('Test of parameters') {
-        sh "ls"
-
         def environment = docker.build('tober_test_docker_build')
         environment.inside() {
-            sh 'ls -a src/'
 //==============================================================================
             String commandParams = ''
 // AWIS ------------------------------------------------------------------------
@@ -43,8 +40,11 @@ node {
             sh "mvn clean test" + commandParams
         }
     }
-    stage('Results') {
-//        junit allowEmptyResults: true, keepLongStdio: true, testResults: '**/target/surefire-reports/*.xml'
-        archiveArtifacts '/var/jenkins_home/workspace/np_test_suite/target/screenshots/*.png'
+    stage('Results log') {
+        junit allowEmptyResults: true, keepLongStdio: true, testResults: '**/target/surefire-reports/*.xml'
+    }
+
+    stage('Take screenshot'){
+        archiveArtifacts "/var/jenkins_home/workspace/np_test_suite/target/screenshots/*.png"
     }
 }
