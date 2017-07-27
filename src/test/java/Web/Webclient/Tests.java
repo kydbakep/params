@@ -67,7 +67,7 @@ public class Tests {
         mainPage.checkUserType();
     }
 
-//    @Test
+    @Test
     public void login2() throws InterruptedException {
         AuthPage authPage = new AuthPage();
         MainPage mainPage = new MainPage();
