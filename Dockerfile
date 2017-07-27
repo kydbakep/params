@@ -41,4 +41,7 @@ RUN mkdir /.pki \
     && mkdir /.pki/nssdb \
     && chmod -R 755 /.pki \
     && chmod -R 755 /usr/src
+    && mkdir /target \
+    && mkdir /target/screenshots \
+    && chmod -R 755 /target
 

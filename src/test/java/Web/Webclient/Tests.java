@@ -31,7 +31,7 @@ public class Tests {
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = false;
         Configuration.timeout = 1500;
-        Configuration.reportsFolder="target/surefire-reports";
+        Configuration.reportsFolder="target/screenshots";
 
     }
 
