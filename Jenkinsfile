@@ -46,7 +46,7 @@ node {
 //            junit allowEmptyResults: true, keepLongStdio: true, testResults: '/var/log*'
         }
     }
-    stage ('Results'){
+    stage('Results') {
         junit allowEmptyResults: true, keepLongStdio: true, testResults: '**/target/surefire-reports/*'
         ls '**/target/surefire-reports/'
     }
