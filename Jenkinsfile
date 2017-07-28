@@ -44,7 +44,7 @@ node {
         junit allowEmptyResults: true, keepLongStdio: true, testResults: '**/target/surefire-reports/*.xml'
     }
 
-    stage('Take screenshot'){
-        archiveArtifacts "/var/jenkins_home/workspace/np_test_suite/target/screenshots/*.png"
+    stage('Artifacts'){
+        archiveArtifacts 'build/reports/**/*'
     }
 }
